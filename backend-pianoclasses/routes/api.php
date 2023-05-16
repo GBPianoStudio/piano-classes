@@ -41,5 +41,4 @@ Route::controller(LessonController::class)->group(function(){
     Route::post('lessons','App\Http\Controllers\Api\LessonController@store');
     Route::put('lesson/{id}','App\Http\Controllers\Api\LessonController@update');
     Route::delete('lesson/{id}','App\Http\Controllers\Api\LessonController@destroy');
-    // Route::put('lesson/{id}','App\Http\Controllers\Api\LessonController@confirm');
 });

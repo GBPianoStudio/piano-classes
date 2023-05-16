@@ -3,7 +3,7 @@
 @import './styles/contactButton.css';
 @import './styles/textborder.css';
 @import './styles/piano.css';
-@import './components/DayHour/DayHour.css';
+@import './components/DayHour/dayHour.css';
 @import './styles/navbarStyle.css';
 @import './styles/formSignUp.css';
 @import './styles/loginForm.css';

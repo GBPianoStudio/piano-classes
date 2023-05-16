@@ -11,12 +11,12 @@ footer{
     font-family: 'Lexend', sans-serif;
     color: var(--light-pink);
     text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
+    /* 0 0 5px #fff,
+    0 0 10px #fff, */
     0 0 20px #fff,
-    0 0 40px var(--light-pink),
+    /* 0 0 40px var(--light-pink), */
     0 0 80px var(--light-pink),
-    0 0 90px var(--light-pink),
+    /* 0 0 90px var(--light-pink), */
     0 0 100px var(--light-pink),
     0 0 150px var(--light-pink);
 }

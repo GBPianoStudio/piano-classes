@@ -23,10 +23,6 @@
     inset 0 0 5px 0 var(--dark-pink),
     0 0 20px 2px var(--dark-pink),
     inset 0 0 20px 2px var(--dark-pink);
-  
-    /* box-shadow: var(--dark-pink) 50px 50px 100px -20px, var(--dark-pink) 3px 30px 60px -30px, var(--dark-pink) 0px -2px 6px 0px inset;
-
-} */
 }
 
 .p-landing {

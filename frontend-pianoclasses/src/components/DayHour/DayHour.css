@@ -90,16 +90,10 @@ span.fc-icon-chevron-right {
     margin: 1rem 1.5rem 0rem 1.5rem;
 }
 
-/* hides event title */
-/* .fc-event-title {
-    visibility: hidden; 
-} */
-
 .fc-day-today {
     background-color: var(--grey);
   }
 
-  /* // 1.5em by default */
 .fc-timegrid-slot {
     height: 15em; 
     border-bottom: 0 !important;
@@ -122,7 +116,6 @@ span.fc-icon-chevron-right {
     border-style: solid;
     border-color:white;
     border-radius: 0.5em; 
-
 }
 .i-pink {
     background-color: var(--dark-pink);

@@ -10,8 +10,6 @@ function Textborder() {
           Hello!<br></br> 
           My name is Gillian Beckwith and I teach piano in East Belfast.<br></br>
           Welcome to my website where you can contact me, book a class and get some more information.
-
-
         </p>
         </div>
     </div>

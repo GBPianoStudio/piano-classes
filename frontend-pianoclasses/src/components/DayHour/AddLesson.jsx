@@ -1,6 +1,4 @@
-/* eslint-disable no-lone-blocks */
 import React, {useState, useEffect} from "react";
-// import Modal from "react-modal";
 import '../../index.css';
 import moment from "moment";
 import Swal from "sweetalert2";
@@ -14,19 +12,16 @@ export default function AddLesson ({isOpen, onClose, onEventAdded, calValues}) {
     const [title, setTitle] = useState('');
     const [start, setStart] = useState('');
     const [end, setEnd] = useState('');
-    // const [show, setShow] = useState();
 
     useEffect(() => {
-        // simulate async api call with set timeout
         setTimeout(() => setStart(calValues.start), 1000);
         setTimeout(() => setEnd(calValues.end), 1000);
         setTimeout(() => setTitle(calValues.title), 1000);
 
-    }, [calValues.start,calValues.end, calValues.title]); // pass an empty array as the second argument to useEffect to run it only once on mount
-   
+    }, [calValues.start,calValues.end, calValues.title]); 
+    
     function onSubmit(event) {
-        event.preventDefault(); // Prevents the default behavior of form submission
-        // Your logic for handling form submission goes here
+        event.preventDefault(); 
 
         if (moment(start).format("YYYY-MM-DD HH:mm:ss")>moment(minStart).format("YYYY-MM-DD HH:mm:ss")) {
             onEventAdded({
@@ -37,7 +32,6 @@ export default function AddLesson ({isOpen, onClose, onEventAdded, calValues}) {
             })
             onClose();
         } else {
-
             Swal.fire({
                 position: 'center',
                 title: 'Lesson not booked',
@@ -50,19 +44,14 @@ export default function AddLesson ({isOpen, onClose, onEventAdded, calValues}) {
                   confirmButton: 'custom-button-class confirm-button'
                 },
                 buttonsStyling: false,
-              }) 
+            }) 
         }
     }
-
-    // const customStyles = {
-    //     overlay: {zIndex: 1000}
-    // };
 
     const changeStart = (event) => {
         console.log(event);
         const value = event;        
         setTimeout(() => setStart(value), 1000);
-
     };
 
     const onChange = (event) => {
@@ -75,12 +64,10 @@ export default function AddLesson ({isOpen, onClose, onEventAdded, calValues}) {
     };
 
     const handleClose = () => {
-        // setShow(false);
         onClose(true);
     };
 
     return (
-        // <Modal show={show} style={customStyles} isOpen={isOpen} onRequestClose={onClose} ariaHideApp={false} >
     <div className="modal">
         <div className="modal-content">
           <span className="span-modal-close" onClick={handleClose}>&times;</span>
@@ -121,6 +108,6 @@ export default function AddLesson ({isOpen, onClose, onEventAdded, calValues}) {
 
         </div>
     </div>    
-    //  </Modal> 
+
     )
 }

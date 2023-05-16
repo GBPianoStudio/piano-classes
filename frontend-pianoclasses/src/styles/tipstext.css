@@ -2,17 +2,15 @@
     color: white;
     padding: 2rem; 
     font-size: 1.2rem;
-   
 }
 
 .li-tips {
-list-style-type: circle; 
-font-size: 1.2rem;
-padding: 0.5rem;
+    list-style-type: circle; 
+    font-size: 1.2rem;
+    padding: 0.5rem;
 }
 
 .li-tips-bold{
-    
     font-size: 1.2rem;
     padding: 0.5rem;  
     font-weight: bold;
@@ -21,7 +19,7 @@ padding: 0.5rem;
 ul {
     list-style-type: circle;  
     margin: 0 2rem;
-padding-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 .li2 {
     font-size: 1.1rem;

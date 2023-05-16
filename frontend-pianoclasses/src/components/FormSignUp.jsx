@@ -4,8 +4,6 @@ import Swal from 'sweetalert2';
 import {useNavigate} from 'react-router-dom';
 import { getAxiosInstance } from '../services/functions';
 
-
-
 function Form() {
    const instance = getAxiosInstance();
    const navigate = useNavigate()

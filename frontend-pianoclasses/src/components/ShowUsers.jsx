@@ -1,6 +1,5 @@
 import React, {useEffect, useState } from 'react'
 import { getAllUsers, deleteUser, getUser} from '../services/Api';
-// import Authorizer from './AuthorizerUser';
 import { getAxiosInstance } from '../services/functions';
 import UserDetails from './UserDetails';
 import ModalButton from './ModalButton';
@@ -13,7 +12,6 @@ const ShowUsers = () => {
   const [errors, setErrors] = useState('');
   const [selectedUser, setSelectedUser] = useState(null);
   const [showModal, setShowModal] = useState(false);
-  // const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
     loadUsers();
@@ -74,7 +72,6 @@ const ShowUsers = () => {
             },
             buttonsStyling: false,
           });
-          // setErrors('');
           loadUsers();
           closeModal();
         }
@@ -142,7 +139,6 @@ const handleCheckboxChange = async(id) => {
             <thead className="head">
               <tr className="tr-user-table">
                 <th>Student</th>
-                {/* <th>Contact</th> */}
                 <th className='AU'>AU</th>
                 <th className='Mgn'></th>
               </tr>
@@ -151,7 +147,6 @@ const handleCheckboxChange = async(id) => {
             {users.map((user) => (
               <tr className="tr-user-table" key={user.id}>
                 <td>{user.student_name}</td>
-                {/* <td>{user.email}</td> */}
                  <td>
                     { user.is_authorised === 1 ?
                     <input className="form-check-input" type="checkbox" value={user.id} id="flexCheckCheckedDisabled" checked disabled />

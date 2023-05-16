@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import '../index.css';
 
-
 const Play = () => {
 
   const addClass = (e) => {
@@ -42,7 +41,7 @@ const Play = () => {
     <div id="play">
       <div id="piano-container">
         <li>                
-          <button className="key white" data-key="65" onClick={clickPlay}>                   
+          <button className="key white" data-key="65" onClick={clickPlay}>            
           </button>
           <button className="key black" data-key="87" onClick={clickPlay}>
           </button>    

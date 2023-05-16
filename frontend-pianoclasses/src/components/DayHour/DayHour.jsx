@@ -38,11 +38,8 @@ function DayHour () {
       eventState(events);
     }
 
-    //set event colours and editable
     function eventState (events) {
-
       for (let i = 0; i < events.length; i++) {
-        //set default values on initializing
         events[i].editable=false;
         events[i].durationEditable=false;
 
@@ -58,14 +55,13 @@ function DayHour () {
             events[i].backgroundColor='#FA1E9A';  // pink
           };
         } else {
-          events[i].title=""; //hide other user info from current user unless admin
+          events[i].title=""; 
           events[i].backgroundColor='#676060'; //grey
         };
 
       }
     }
 
-    //this function opens the modal to add the lesson
     const openModal  = (info) => {
       const { start, end } = info;
       setEvents([
@@ -75,7 +71,7 @@ function DayHour () {
           end,
         },
       ]);
-      // check if the lesson is after 24hrs 
+
       if (moment(start).format("YYYY-MM-DD HH:mm:ss") > minStart) {
 
         setIsAddOpen(true);
@@ -85,7 +81,6 @@ function DayHour () {
           start: moment(info.start).format("YYYY-MM-DD HH:mm:ss"), 
           end: moment(info.end).format("YYYY-MM-DD HH:mm:ss")
         }
-
         setLoadCalendar(true);
         setIsAddOpen(true)
       } else {
@@ -121,7 +116,6 @@ function DayHour () {
     
     async function handleEventAdd(data) {
       await instance.post(`/api/lessons`, data);
-  //    await instance.post('http://localhost:8000/api/lessons', data).then(res=> {
 
       Swal.fire({
         position: 'center',
@@ -142,16 +136,12 @@ function DayHour () {
 
     };
 
-    
-        
-    //shows lesson details, allows teacher to confirm classes
     const handleSelect = (info) => {
       passArray= {id: info.event.id, title: info.event.title, start: moment(info.event.start).format("YYYY-MM-DD HH:mm:ss"), end: moment(info.event.end).format("YYYY-MM-DD HH:mm:ss")};
       setIsConfirmOpen(true);
       setLoadCalendar(true);
     };
 
-    //shows update modal for user to change their lesson time
     const changeLesson = (info) => {
       passArray= {id: info.event.id, title: info.event.title, start: moment(info.event.start).format("YYYY-MM-DD HH:mm:ss"), end: moment(info.event.end).format("YYYY-MM-DD HH:mm:ss")};
       setIsUpdateOpen(true);

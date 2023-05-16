@@ -3,18 +3,14 @@
     display: flex;
     justify-content: center;
     padding : 1rem;
-    margin-bottom: 4rem; 
+    margin-bottom: 2rem; 
   }
   #piano-h1{
     
       color: rgb(160, 160, 240);
       text-shadow:
-      /* 0 0 5px var(--dark-blue),
-      0 0 10px var(--dark-blue), */
       0 0 20px var(--dark-blue),
-      /* 0 0 40px var(--dark-blue), */
       0 0 80px var(--dark-blue),
-      /* 0 0 90px var(--dark-blue), */
       0 0 100px var(--dark-blue),
       0 0 150px var(--dark-blue);
   }

@@ -12,15 +12,14 @@ export default function ConfirmLesson ({isOpen, onClose, eValues}) {
 
     useEffect(() => {
         async function fetchData() {
-        try {
-            // const response = await axios.get(`/api/objects/${id}`);`/api/login`
-            const response = await instance.get(`/api/lesson/${eValues.id}`);
-            showConfirmed = response.data.is_confirmed;
-            userID = response.data.user_id;
-            console.log(response.data.is_confirmed);
-        } catch (error) {
-            console.error(error);
-        }
+          try {
+              const response = await instance.get(`/api/lesson/${eValues.id}`);
+              showConfirmed = response.data.is_confirmed;
+              userID = response.data.user_id;
+              console.log(response.data.is_confirmed);
+          } catch (error) {
+              console.error(error);
+          }
         }
         fetchData();
     });
@@ -61,7 +60,6 @@ export default function ConfirmLesson ({isOpen, onClose, eValues}) {
         title: 'Delete Lesson',
         text: "Are you sure you want to delete this lesson?", 
         showCancelButton: true, 
-        // confirmButton: 'true', 
         cancelButtonText: 'NO, CANCEL',
         confirmButtonText: 'YES, DELETE!',
         color: 'white', 
@@ -77,47 +75,24 @@ export default function ConfirmLesson ({isOpen, onClose, eValues}) {
         if (result.isConfirmed) {
           const response = await instance.delete(`/api/lesson/${eValues.id}`);
           if (response.errors) {
-            // setErrors(response.errors);
           } else {
-              onClose();
-              Swal.fire({
-                    position: 'center',
-                    title: 'Lesson deleted',
-                    text: 'You have successfully deleted the lesson.',
-                    confirmButtonText: 'OK',
-                    color: 'white', 
-                    background: '#676060', 
-                    confirmButtonColor: 'black', 
-                    customClass: {
-                      confirmButton: 'custom-button-class confirm-button'
-                    },
-                    buttonsStyling: false,
-                  }) 
-
+            onClose();
+            Swal.fire({
+                  position: 'center',
+                  title: 'Lesson deleted',
+                  text: 'You have successfully deleted the lesson.',
+                  confirmButtonText: 'OK',
+                  color: 'white', 
+                  background: '#676060', 
+                  confirmButtonColor: 'black', 
+                  customClass: {
+                    confirmButton: 'custom-button-class confirm-button'
+                  },
+                  buttonsStyling: false,
+            }) 
           }
         }
       });
-
-
-
-
-
-        // await instance.delete(`/api/lesson/${eValues.id}`);
-        // onClose();
-        // Swal.fire({
-        //   position: 'center',
-        //   title: 'Lesson deleted',
-        //   text: 'You have successfully deleted the lesson.',
-        //   confirmButtonText: 'OK',
-        //   color: 'white', 
-        //   background: '#676060', 
-        //   confirmButtonColor: 'black', 
-        //   customClass: {
-        //     confirmButton: 'custom-button-class confirm-button'
-        //   },
-        //   buttonsStyling: false,
-        // }) 
-
     };
 
     const handleClose = () => {

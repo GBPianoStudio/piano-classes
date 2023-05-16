@@ -1,7 +1,6 @@
 import React from 'react';
 import '../index.css';
-import photo from '../assets/images/piano_front.png'; // with import
-
+import photo from '../assets/images/piano_front.png'; 
 
 function AboutPicture() {
   return (
