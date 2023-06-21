@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/GBPianoStudio/static/css/main.2504ddbf.css",
+    "main.js": "/GBPianoStudio/static/js/main.8ac93d70.js",
+    "static/media/piano_front.png": "/GBPianoStudio/static/media/piano_front.cdaf91fddba601180cc2.png",
+    "index.html": "/GBPianoStudio/index.html",
+    "main.2504ddbf.css.map": "/GBPianoStudio/static/css/main.2504ddbf.css.map",
+    "main.8ac93d70.js.map": "/GBPianoStudio/static/js/main.8ac93d70.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2504ddbf.css",
+    "static/js/main.8ac93d70.js"
+  ]
+}
